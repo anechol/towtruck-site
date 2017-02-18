@@ -1,34 +1,35 @@
 import React from 'react';
-import NavLink from './NavLink';
+import RouteLink from './RouteLink';
+import main from '../styles/mainStyle';
 
 export default React.createClass({
   render() {
     return (
-      <div>
-        <header>
-          <nav className='navbar navbar-inverse bg-inverse' role='navigation'>
+      <div style={main.body}>
+        <header style={main.header}>
+          <nav className='container navbar navbar-inverse navbar-toggleable-sm' role='navigation'>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarhiddencontent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div id='nav' className='container collapse navbar-collapse'>
-              <ul className='nav text-center row'>
-                <li className='nav-item col'>
-                  <NavLink to='/' className='nav-link active'>Home</NavLink>
+            <div id='nav' className='collapse navbar-collapse'>
+              <ul className='nav'>
+                <li className='nav-item'>
+                  <RouteLink to='/' className='nav-link active'>Home</RouteLink>
                 </li>
-                <li className='nav-item col'>
-                  <NavLink to='about' className='nav-link'>About</NavLink>
+                <li className='nav-item'>
+                  <RouteLink to='about' className='nav-link'>About</RouteLink>
                 </li>
-                <li className='nav-item col'>
-                  <NavLink to='services' className='nav-link'>Services</NavLink>
+                <li className='nav-item'>
+                  <RouteLink to='services' className='nav-link'>Services</RouteLink>
                 </li>
-                <li className='nav-item col'>
-                  <NavLink to='contact' className='nav-link'>Contact</NavLink>
+                <li className='nav-item'>
+                  <RouteLink to='contact' className='nav-link'>Contact</RouteLink>
                 </li>
               </ul>
             </div>
           </nav>
         </header>
-        <main>
+        <main style={main.main}>
           {this.props.children}
         </main>
       </div>
