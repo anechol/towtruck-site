@@ -9,3 +9,4 @@ coverage
 sandbox
 test/out-fixtures/*
 test/watch-*.txt
+notes.txt

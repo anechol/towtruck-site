@@ -1,12 +1,11 @@
 import React from 'react';
 import RouteLink from './RouteLink';
-import main from '../styles/mainStyle';
 
 export default React.createClass({
   render() {
     return (
-      <div style={main.body}>
-        <header style={main.header}>
+      <div className='mainContainer'>
+        <header className='topbar'>
           <nav className='container navbar navbar-inverse navbar-toggleable-sm' role='navigation'>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarhiddencontent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
@@ -29,7 +28,7 @@ export default React.createClass({
             </div>
           </nav>
         </header>
-        <main style={main.main}>
+        <main className='main'>
           {this.props.children}
         </main>
       </div>

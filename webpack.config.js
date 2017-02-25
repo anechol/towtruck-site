@@ -1,27 +1,31 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-	template: `${__dirname}/app/index.html`,
-	filename: 'index.html',
-	inject: 'body'
-});
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: ['./app/index.js'],
-  output: {
-    path: `${__dirname}/dist`,
-    filename: 'bundle.js'
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
+	entry: './app/js/index.js',
+	output: {
+		filename: './dist/js/bundle.js'
+	},
+	devtool: 'source-map',
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /(node_modules)/,
+				loader: 'babel-loader',
 				query: {
-					presets: ['es2015', 'react']
+					presets: ['react', 'es2015']
 				}
-      }
-    ]
-  },
-  plugins: [HtmlWebpackPluginConfig]
+			},
+			{
+				test: /\.sass$/,
+				use: ExtractTextPlugin.extract('css-loader!postcss-loader!sass-loader')
+			}
+		]
+	},
+	plugins: [
+		new ExtractTextPlugin({
+			filename: './dist/css/[name].css',
+			allChunks: true
+		})
+	]
 }

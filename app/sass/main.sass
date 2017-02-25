@@ -1,0 +1,60 @@
+//// GLOBAL
+
+// Variables
+
+$mainFont: 'Roboto', sans-serif
+$headingFont: 'Roboto Slab', serif
+
+// Colors
+$black: hsl(0,0%,13%)
+$blue: hsl(211, 66%, 45%)
+$grey: hsl(0,0%,70%)
+$purple: hsl(279, 19%, 23%)
+
+//// SECTIONS
+
+// Main
+
+.mainContainer
+	font-family: $mainFont
+	height: 100%
+
+.topbar
+	background: $purple
+
+.main
+	margin-top: 5%
+
+// Home
+
+#home
+	background: $grey
+	height: 120%
+	.mainHeader
+		padding: 10% inherit
+		background: none
+	.title
+		font-family: $headingFont
+	.homeButton
+		background: $blue
+		border-color: $blue
+
+// About
+
+// Services
+
+// Contact
+
+#contact
+	.title
+		font-family: $headingFont
+	.inputBox
+		border: none
+		border-bottom: 1px solid $grey
+		border-right: 1px solid $grey
+		border-radius: 0
+	.buttonContainer
+		margin-bottom: 5%
+	.inPutButton
+		background: $blue
+		border-color: $blue
