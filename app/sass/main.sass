@@ -7,9 +7,9 @@ $headingFont: 'Roboto Slab', serif
 
 // Colors
 $black: hsl(0,0%,13%)
-$blue: hsl(211, 66%, 45%)
+$seaGreen: hsl(178, 45%, 55%)
 $grey: hsl(0,0%,70%)
-$purple: hsl(279, 19%, 23%)
+$navy: hsl(225, 59%, 10%)
 
 //// SECTIONS
 
@@ -20,24 +20,25 @@ $purple: hsl(279, 19%, 23%)
 	height: 100%
 
 .topbar
-	background: $purple
+	background: $navy
 
 .main
 	margin-top: 5%
+	h1,h2,h3,h4,h5,h6
+		font-family: $headingFont
 
 // Home
 
 #home
+	// NOTE: Might need file-loader to handle this image
 	background: $grey
-	height: 120%
+	// height: 120%
 	.mainHeader
 		padding: 10% inherit
 		background: none
-	.title
-		font-family: $headingFont
 	.homeButton
-		background: $blue
-		border-color: $blue
+		background: $seaGreen
+		border-color: $seaGreen
 
 // About
 
@@ -50,11 +51,17 @@ $purple: hsl(279, 19%, 23%)
 		font-family: $headingFont
 	.inputBox
 		border: none
-		border-bottom: 1px solid $grey
-		border-right: 1px solid $grey
+		border-bottom: 1px solid lighten($grey, 13%)
+		border-right: 1px solid lighten($grey, 13%)
 		border-radius: 0
+		&::placeholder
+			color: lighten($grey, 3%)
+	textarea
+		border-color: lighten($grey, 13%)
+		&::placeholder
+			color: lighten($grey, 3%)
 	.buttonContainer
 		margin-bottom: 5%
 	.inPutButton
-		background: $blue
-		border-color: $blue
+		background: $seaGreen
+		border-color: $seaGreen

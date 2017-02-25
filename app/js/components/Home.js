@@ -7,7 +7,7 @@ export default React.createClass({
 			<section id='home'>
 				<div className='mainHeader jumbotron'>
 					<div className='container'>
-						<h1 className='title'>Echo Towing</h1>
+						<h1>Echo Towing</h1>
 						<p className='lead'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 						<RouteLink to='about' className='btn btn-success homeButton' role='button'>Learn More</RouteLink>
 					</div>
