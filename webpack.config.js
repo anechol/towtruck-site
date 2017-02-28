@@ -19,7 +19,8 @@ module.exports = {
 			{
 				test: /\.sass$/,
 				use: ExtractTextPlugin.extract('css-loader!postcss-loader!sass-loader')
-			}
+			},
+			{test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader?name=/app/img/[name].[ext]'}
 		]
 	},
 	plugins: [

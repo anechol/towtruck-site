@@ -3,7 +3,7 @@ import React from 'react';
 export default React.createClass({
 	render() {
 		return (
-			<section id='contact'>
+			<section id='contact' className='d-flex justify-content-center align-items-center'>
 				<div className='container'>
 					<h2 className='title'>Contact</h2>
 					<form className='container'>

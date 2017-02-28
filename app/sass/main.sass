@@ -1,15 +1,22 @@
 //// GLOBAL
 
 // Variables
-
 $mainFont: 'Roboto', sans-serif
 $headingFont: 'Roboto Slab', serif
 
 // Colors
 $black: hsl(0,0%,13%)
-$seaGreen: hsl(178, 45%, 55%)
 $grey: hsl(0,0%,70%)
+$white: hsl(0, 0%, 95%)
 $navy: hsl(225, 59%, 10%)
+$seaGreen: hsl(178, 45%, 55%)
+
+// Global Styles
+html, body
+	height: 100%
+	section
+		min-height: 100vh
+		// top: 35%
 
 //// SECTIONS
 
@@ -17,22 +24,24 @@ $navy: hsl(225, 59%, 10%)
 
 .mainContainer
 	font-family: $mainFont
-	height: 100%
 
 .topbar
 	background: $navy
+	a
+		color: $white
+		&:active
+			color: $seaGreen
 
 .main
-	margin-top: 5%
+	color: $white
 	h1,h2,h3,h4,h5,h6
 		font-family: $headingFont
 
 // Home
 
 #home
-	// NOTE: Might need file-loader to handle this image
-	background: $grey
-	// height: 120%
+	// padding-top: 90px
+	background: url('../img/towtruck.jpg') no-repeat center/cover
 	.mainHeader
 		padding: 10% inherit
 		background: none
@@ -41,7 +50,8 @@ $navy: hsl(225, 59%, 10%)
 		border-color: $seaGreen
 
 // About
-
+#about
+	background: url('../img/car-repair.jpg') no-repeat center/cover
 // Services
 
 // Contact

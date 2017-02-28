@@ -5,7 +5,7 @@ export default React.createClass({
   render() {
     return (
       <div className='mainContainer'>
-        <header className='topbar'>
+        <header className='topbar fixed-top'>
           <nav className='container navbar navbar-inverse navbar-toggleable-sm' role='navigation'>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarhiddencontent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
