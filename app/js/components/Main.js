@@ -5,11 +5,13 @@ export default React.createClass({
   render() {
     return (
       <div className='mainContainer'>
-        <header className='topbar fixed-top'>
-          <nav className='container navbar navbar-inverse navbar-toggleable-sm' role='navigation'>
+        <header className='topbar'>
+          <nav className='navbar navbar-inverse navbar-toggleable' role='navigation'>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarhiddencontent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
+            {/* // NOTE: Use this for navbar-toggler-right until fixed */}
+            {/* <span className='nav-text'>&nbsp;</span> */}
             <div id='nav' className='collapse navbar-collapse'>
               <ul className='nav'>
                 <li className='nav-item'>
