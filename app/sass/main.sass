@@ -42,7 +42,7 @@ html, body
 
 .main
 	color: $white
-	h1,h2,h3,h4,h5,h6
+	h1,h2,h3,h4,h5,h6,.h5
 		font-family: $headingFont
 
 // Home
@@ -64,6 +64,25 @@ html, body
 	background: url('../img/hw-library.jpg') no-repeat center/cover
 	h2
 		margin-bottom: 35px
+	img
+		max-width: 150px
+		max-height: 150px
+		border-radius: 50%
+		margin: 15px
+	.test-left
+		font-style: italic
+		margin: 15px auto
+		blockquote
+			padding: 5px 0 5px 10px
+			border-left: 1px solid $grey
+	.test-right
+		font-style: italic
+		margin: 15px auto
+		blockquote
+			padding: 5px 10px 5px 0
+			border-right: 1px solid $grey
+		img
+			order: 2
 
 // Services
 
@@ -90,6 +109,7 @@ html, body
 		&::placeholder
 			color: lighten($grey, 3%)
 	textarea
+		border-radius: 0
 		border-color: transparentize($grey, 0.5)
 		background: transparentize($grey, 0.5)
 		color: $black
