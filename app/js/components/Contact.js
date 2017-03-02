@@ -5,7 +5,7 @@ export default React.createClass({
 		return (
 			<section id='contact' className='d-flex justify-content-center align-items-center'>
 				<div className='container'>
-					<h2 className='title'>Contact</h2>
+					<h2 className='title'>Questions?</h2>
 					<form className='container'>
 						<div className='form-group row'>
 							<input type='text' className='inputBox form-control col-xs-12 col-md col-lg-3 offset-lg-3' id='firstname' aria-describedby='first name' placeholder='First Name'/>
@@ -22,7 +22,7 @@ export default React.createClass({
 							<textarea className="form-control col-xs-12 col-lg-6 offset-lg-3" id="textarea" placeholder='Write message...' rows="5"></textarea>
 						</div>
 						<div className='buttonContainer row'>
-							<button type="submit" className="inputButton btn btn-success col col-lg-6 offset-lg-3">Submit</button>
+							<button type="submit" className="btn col col-lg-6 offset-lg-3">Submit</button>
 						</div>
 					</form>
 				</div>

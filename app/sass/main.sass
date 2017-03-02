@@ -17,6 +17,21 @@ html, body
 	section
 		min-height: 100vh
 
+// React CSS Transition
+.example-enter
+	opacity: 0.01
+
+.example-enter.example-enter-active
+	opacity: 1
+	transition: opacity 500ms ease-in
+
+.enter-leave
+	opacity: 1
+
+.example-leave.example-leave-active
+	opacity: 0.01
+	transition: opacity 300ms ease-in
+
 //// SECTIONS
 
 // Main
@@ -43,6 +58,7 @@ html, body
 .main
 	color: $white
 	h1,h2,h3,h4,h5,h6,.h5
+		color: $seaGreen
 		font-family: $headingFont
 
 // Home
@@ -69,14 +85,15 @@ html, body
 		max-height: 150px
 		border-radius: 50%
 		margin: 15px
-	.test-left
+	.test-source
 		font-style: italic
+		color: $seaGreen
+	.test-left
 		margin: 15px auto
 		blockquote
 			padding: 5px 0 5px 10px
 			border-left: 1px solid $grey
 	.test-right
-		font-style: italic
 		margin: 15px auto
 		blockquote
 			padding: 5px 10px 5px 0
@@ -117,6 +134,7 @@ html, body
 			color: lighten($grey, 3%)
 	.buttonContainer
 		margin-bottom: 5%
-	.inPutButton
+	button
+		color: $white
 		background: $seaGreen
 		border-color: $seaGreen
