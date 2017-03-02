@@ -1,5 +1,6 @@
 import React from 'react';
 import RouteLink from './RouteLink';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default React.createClass({
   render() {
@@ -31,7 +32,18 @@ export default React.createClass({
           </nav>
         </header>
         <main className='main'>
-          {this.props.children}
+          <ReactCSSTransitionGroup
+        		transitionName='page'
+        		transitionAppear={true}
+        		transitionAppearTimeout={500}
+            transitionEnter={true}
+            transitionEnterTimeout={500}
+            transitionLeave={true}
+            transitionLeaveTimeout={100}>
+            {React.cloneElement(this.props.children, {
+              key: this.props.location.pathname
+            })}
+          </ReactCSSTransitionGroup>
         </main>
       </div>
     )
